@@ -20,7 +20,7 @@ export const projects = [
   {
     title: 'Ovix Fashions',
     description: "An E-Commerce site for a fashion store built using ReactJS, Nextjs, CommerceJS, TailwindCSS and hosted on Vercel.",
-      image: '/images/Oviz.PNG',
+      image: '/images/Oviz.png',
       tags: ['ReactJS', 'NextJS', 'CommerceJS', 'TailwindCSS'],
     source: 'https://github.com/SankhajaH/Oviz-fashions',
     visit: 'https://ovix-fashions.vercel.app/',
