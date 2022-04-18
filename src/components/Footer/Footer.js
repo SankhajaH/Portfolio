@@ -21,12 +21,20 @@ const Footer = () => {
            <br/>It’s about telling a story through the message and visuals.</Slogan>
        </CompanyContainer>
        <SocialContainer>
-       <SocialIcons href="https://github.com">
+         <a href="https://github.com/SankhajaH" rel='noopener noreferrer'
+        target='_blank'>
+       <SocialIcons >
         <AiFillGithub size="3rem" />
       </SocialIcons>
-      <SocialIcons href="https://linkedin.com">
+      </a>
+      <a href="https://www.linkedin.com/in/sankhaja-hapukotuwa-a13ab41b5/"  rel='noopener noreferrer'
+        target='_blank'>
+      <SocialIcons >
+        
         <AiFillLinkedin size="3rem" />
+        
       </SocialIcons>
+      </a>
        </SocialContainer>
      </SocialIconsContainer>
      </>
