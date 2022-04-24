@@ -26,6 +26,15 @@ export const projects = [
     visit: 'https://ovix-fashions.vercel.app/',
     id: 2,
   },
+  {
+    title: 'API-Climate Change',
+    description: "A simple API to get news regarding climate change globally built using NodeJS, ExpressJS, Cheerio, Axios and deployed on Heroku",
+      image: '/images/API.png',
+      tags: ['NodeJS', 'ExpressJS', 'Cheerio', 'Axios'],
+    source: 'https://github.com/SankhajaH/API-climate-change',
+    visit: 'https://climatechange2api.herokuapp.com/',
+    id: 3,
+  },
 ];
 
 export const TimeLineData = [
