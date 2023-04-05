@@ -33,7 +33,7 @@ export const projects = [
         title: 'Trousseau',
         description:
             'A mobile-oriented site for basic wardrobe management built using NextJs, TailwindCSS, Firebase and hosted on Vercel.',
-        image: '/images/trtr.PNG',
+        image: '/images/trtr.png',
         tags: ['NextJS', 'Firebase', 'TailwindCSS'],
         source: 'https://github.com/SankhajaH/troussaeu',
         visit: 'https://troussaeu.vercel.app/',
