@@ -1,43 +1,51 @@
 import React from 'react';
 
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
-import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
-import { projects } from '../../constants/constants';
-
-
+import {projects} from '../../constants/constants';
+import {Section, SectionDivider, SectionTitle} from '../../styles/GlobalComponents';
+import {
+    BlogCard,
+    CardInfo,
+    ExternalLinks,
+    GridContainer,
+    HeaderThree,
+    Hr,
+    Img,
+    Tag,
+    TagList,
+    TitleContent,
+    UtilityList,
+} from './ProjectsStyles';
 
 const Projects = () => (
-  <Section nopadding id="projects">
-    <SectionDivider />
-    <SectionTitle main>Projects</SectionTitle>
-    <GridContainer>
-      {projects.map(({id, image, title, description, tags, source, visit}) => (
-        <BlogCard key={id}>
-          <Img src={image} />
-          <TitleContent>
-            <HeaderThree title=''>{title}</HeaderThree>
-            <Hr />
-          </TitleContent>
-          <CardInfo>{description}</CardInfo>
-          <br/>
-          <div>
-          <TitleContent>Stack</TitleContent>
-          <TagList>
-            {tags.map((tag, i) => (
-              <Tag key={i}>{tag}</Tag>
+    <Section nopadding id='projects'>
+        <SectionDivider />
+        <SectionTitle main>Projects</SectionTitle>
+        <GridContainer>
+            {projects.map(({id, image, title, description, tags, source, visit}) => (
+                <BlogCard key={id}>
+                    <Img src={image} />
+                    <TitleContent>
+                        <HeaderThree title=''>{title}</HeaderThree>
+                        <Hr />
+                    </TitleContent>
+                    <CardInfo>{description}</CardInfo>
+                    <br />
+                    <div>
+                        <TitleContent>Stack</TitleContent>
+                        <TagList>
+                            {tags.map((tag, i) => (
+                                <Tag key={i}>{tag}</Tag>
+                            ))}
+                        </TagList>
+                    </div>
+                    <UtilityList>
+                        <ExternalLinks href={source}>Code</ExternalLinks>
+                        {visit && <ExternalLinks href={visit}>Visit</ExternalLinks>}
+                    </UtilityList>
+                </BlogCard>
             ))}
-          </TagList>
-          </div>
-          <UtilityList>
-            <ExternalLinks href={source}>Code</ExternalLinks>
-            {visit &&
-            <ExternalLinks href={visit}>Visit</ExternalLinks>
-            }
-          </UtilityList>
-        </BlogCard>
-      ))}
-    </GridContainer>
-  </Section>
+        </GridContainer>
+    </Section>
 );
 
 export default Projects;
