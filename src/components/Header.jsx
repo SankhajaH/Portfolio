@@ -54,7 +54,7 @@ const Header = () => {
                             marginBottom: '20px',
                         }}
                     >
-                        <DiCssdeck size='3rem' /> <div className='text-lg'>Portfolio</div>
+                        <DiCssdeck size='3rem' /> <div className='text-lg'>Sankhaja</div>
                     </a>
                 </ScrollLink>
             </div>
@@ -89,45 +89,39 @@ const Header = () => {
                     </a>
                 </div>
             </div>
-            <div id='navItems' className='flex flex-row space-x-2'>
-                <p>
+            <div id='navItems' className='flex flex-row space-x-3'>
+                <div>
+                    <a href='mailto:shapu953@gmail.com' rel='noopener noreferrer' target='_blank'>
+                        <HiOutlineMail
+                            size={30}
+                            className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'
+                        />
+                    </a>
+                </div>
+                <div>
                     <a
                         href='https://github.com/SankhajaH'
                         rel='noopener noreferrer'
                         target='_blank'
                     >
-                        <div>
-                            <AiFillGithub
-                                size={30}
-                                className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'
-                            />
-                        </div>
+                        <AiFillGithub
+                            size={30}
+                            className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'
+                        />
                     </a>
-                </p>
-                <p>
+                </div>
+                <div>
                     <a
                         href='https://www.linkedin.com/in/sankhaja-hapukotuwa-a13ab41b5/'
                         rel='noopener noreferrer'
                         target='_blank'
                     >
-                        <div>
-                            <AiFillLinkedin
-                                size={30}
-                                className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'
-                            />
-                        </div>
+                        <AiFillLinkedin
+                            size={30}
+                            className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'
+                        />
                     </a>
-                </p>
-                <p>
-                    <a href='mailto:shapu953@gmail.com' rel='noopener noreferrer' target='_blank'>
-                        <div>
-                            <HiOutlineMail
-                                size={30}
-                                className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'
-                            />
-                        </div>
-                    </a>
-                </p>
+                </div>
             </div>
         </nav>
     );
