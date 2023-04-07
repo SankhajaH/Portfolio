@@ -96,8 +96,11 @@ const Header = () => {
                         rel='noopener noreferrer'
                         target='_blank'
                     >
-                        <div className='hover:shadow-blue shadow-lg'>
-                            <AiFillGithub size={30} />
+                        <div>
+                            <AiFillGithub
+                                size={30}
+                                className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'
+                            />
                         </div>
                     </a>
                 </p>
@@ -107,15 +110,21 @@ const Header = () => {
                         rel='noopener noreferrer'
                         target='_blank'
                     >
-                        <div className='hover:shadow-blue shadow-lg'>
-                            <AiFillLinkedin size={30} />
+                        <div>
+                            <AiFillLinkedin
+                                size={30}
+                                className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'
+                            />
                         </div>
                     </a>
                 </p>
                 <p>
                     <a href='mailto:shapu953@gmail.com' rel='noopener noreferrer' target='_blank'>
-                        <div className='hover:shadow-blue shadow-lg'>
-                            <HiOutlineMail size={30} />
+                        <div>
+                            <HiOutlineMail
+                                size={30}
+                                className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'
+                            />
                         </div>
                     </a>
                 </p>

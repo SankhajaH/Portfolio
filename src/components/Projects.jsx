@@ -1,8 +1,8 @@
 import {gsap} from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import React, {useEffect} from 'react';
-import {projects} from '../../constants/constants';
-import ProjectCard from '../ProjectCard';
+import {projects} from '../constants/constants';
+import ProjectCard from './ProjectCard';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,7 +25,10 @@ const Projects = () => {
             <p className='font-semibold text-5xl pb-8 pt-24'>Projects</p>
             <div>
                 {projects.map(({id, image, title, description, tags, source, visit}) => (
-                    <div key={id}>
+                    <div
+                        key={id}
+                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'
+                    >
                         <ProjectCard
                             id={id}
                             image={image}
