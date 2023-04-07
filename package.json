@@ -9,6 +9,7 @@
     },
     "dependencies": {
         "@fontsource/space-grotesk": "^4.5.13",
+        "gsap": "^3.11.5",
         "next": "10.2.3",
         "react": "17.0.2",
         "react-dom": "17.0.2",

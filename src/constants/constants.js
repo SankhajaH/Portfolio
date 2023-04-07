@@ -29,14 +29,4 @@ export const projects = [
         visit: 'https://ovix-fashions.vercel.app/',
         id: 2,
     },
-    {
-        title: 'Trousseau',
-        description:
-            'A mobile-oriented site for basic wardrobe management built using NextJs, TailwindCSS, Firebase and hosted on Vercel.',
-        image: '/images/trtr.png',
-        tags: ['NextJS', 'Firebase', 'TailwindCSS'],
-        source: 'https://github.com/SankhajaH/troussaeu',
-        visit: 'https://troussaeu.vercel.app/',
-        id: 3,
-    },
 ];

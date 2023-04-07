@@ -1,36 +1,46 @@
-import React from 'react';
-
+import {gsap} from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import React, {useEffect} from 'react';
 import {projects} from '../../constants/constants';
+import ProjectCard from '../ProjectCard';
 
-const Projects = () => (
-    <section id='projects'>
-        <div />
-        <div>Projects</div>
-        <div>
-            {projects.map(({id, image, title, description, tags, source, visit}) => (
-                <div key={id}>
-                    <img src={image} />
-                    <div>
-                        <div title=''>{title}</div>
+gsap.registerPlugin(ScrollTrigger);
+
+const Projects = () => {
+    useEffect(() => {
+        gsap.from('#projects', {
+            scrollTrigger: {
+                trigger: '#projects',
+                start: 'top 80%',
+            },
+            opacity: 0,
+            y: 40,
+            ease: 'linear.out',
+            duration: 1,
+            delay: 0.3,
+        });
+    }, []);
+    return (
+        <section id='projects' style={{minHeight: '80vh'}}>
+            <p className='font-semibold text-5xl pb-8 pt-24'>Projects</p>
+            <div>
+                {projects.map(({id, image, title, description, tags, source, visit}) => (
+                    <div key={id}>
+                        <ProjectCard
+                            id={id}
+                            image={image}
+                            title={title}
+                            description={description}
+                            tags={tags}
+                            source={source}
+                            visit={visit}
+                        />
+                        <div className='pb-4'></div>
                     </div>
-                    <div>{description}</div>
-                    <br />
-                    <div>
-                        <div>Stack</div>
-                        <div>
-                            {tags.map((tag, i) => (
-                                <div key={i}>{tag}</div>
-                            ))}
-                        </div>
-                    </div>
-                    <div>
-                        <div href={source}>Code</div>
-                        {visit && <div href={visit}>Visit</div>}
-                    </div>
-                </div>
-            ))}
-        </div>
-    </section>
-);
+                ))}
+            </div>
+        </section>
+    );
+};
 
 export default Projects;

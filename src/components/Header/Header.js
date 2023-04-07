@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import {gsap} from 'gsap';
+import React, {useEffect, useState} from 'react';
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
 import {DiCssdeck} from 'react-icons/di';
 import {HiOutlineMail} from 'react-icons/hi';
@@ -7,6 +8,18 @@ import {Link as ScrollLink} from 'react-scroll';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [menu, setMenu] = useState('');
+
+    useEffect(() => {
+        const tl = gsap.timeline({delay: 0.4});
+
+        tl.from('#id', {opacity: 0, duration: 0.3, ease: 'expo.in'}, 'start').from('#navItems', {
+            opacity: 0,
+            y: -10,
+            stagger: 0.1,
+            ease: 'power2.out',
+            duration: 0.5,
+        });
+    }, []);
 
     const toggle = () => {
         if (!isOpen) {
@@ -23,7 +36,7 @@ const Header = () => {
     };
     return (
         <nav className='sticky top-0 z-50 flex items-center justify-between bg-primary-base text-white-dark p-4'>
-            <div className='flex flex-row'>
+            <div id='id' className='flex flex-row'>
                 <ScrollLink
                     className='transition ease-in cursor-pointer'
                     to='home'
@@ -34,7 +47,6 @@ const Header = () => {
                     onClick={handleLink}
                 >
                     <a
-                        className='hover:text-xl'
                         style={{
                             display: 'flex',
                             alignItems: 'center',
@@ -46,18 +58,7 @@ const Header = () => {
                     </a>
                 </ScrollLink>
             </div>
-            <div className='flex flex-row space-x-16'>
-                <ScrollLink
-                    className='transition ease-in cursor-pointer hover:text-blue'
-                    to='hero'
-                    smooth
-                    duration={500}
-                    offset={-100}
-                    isDynamic
-                    onClick={handleLink}
-                >
-                    About
-                </ScrollLink>
+            <div id='navItems' className='flex flex-row space-x-16'>
                 <ScrollLink
                     className='transition ease-in cursor-pointer hover:text-blue'
                     to='projects'
@@ -88,7 +89,7 @@ const Header = () => {
                     </a>
                 </div>
             </div>
-            <div className='flex flex-row space-x-2'>
+            <div id='navItems' className='flex flex-row space-x-2'>
                 <p>
                     <a
                         href='https://github.com/SankhajaH'
