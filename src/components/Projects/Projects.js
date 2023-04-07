@@ -1,51 +1,36 @@
 import React from 'react';
 
 import {projects} from '../../constants/constants';
-import {Section, SectionDivider, SectionTitle} from '../../styles/GlobalComponents';
-import {
-    BlogCard,
-    CardInfo,
-    ExternalLinks,
-    GridContainer,
-    HeaderThree,
-    Hr,
-    Img,
-    Tag,
-    TagList,
-    TitleContent,
-    UtilityList,
-} from './ProjectsStyles';
 
 const Projects = () => (
-    <Section nopadding id='projects'>
-        <SectionDivider />
-        <SectionTitle main>Projects</SectionTitle>
-        <GridContainer>
+    <section id='projects'>
+        <div />
+        <div>Projects</div>
+        <div>
             {projects.map(({id, image, title, description, tags, source, visit}) => (
-                <BlogCard key={id}>
-                    <Img src={image} />
-                    <TitleContent>
-                        <HeaderThree title=''>{title}</HeaderThree>
-                        <Hr />
-                    </TitleContent>
-                    <CardInfo>{description}</CardInfo>
+                <div key={id}>
+                    <img src={image} />
+                    <div>
+                        <div title=''>{title}</div>
+                    </div>
+                    <div>{description}</div>
                     <br />
                     <div>
-                        <TitleContent>Stack</TitleContent>
-                        <TagList>
+                        <div>Stack</div>
+                        <div>
                             {tags.map((tag, i) => (
-                                <Tag key={i}>{tag}</Tag>
+                                <div key={i}>{tag}</div>
                             ))}
-                        </TagList>
+                        </div>
                     </div>
-                    <UtilityList>
-                        <ExternalLinks href={source}>Code</ExternalLinks>
-                        {visit && <ExternalLinks href={visit}>Visit</ExternalLinks>}
-                    </UtilityList>
-                </BlogCard>
+                    <div>
+                        <div href={source}>Code</div>
+                        {visit && <div href={visit}>Visit</div>}
+                    </div>
+                </div>
             ))}
-        </GridContainer>
-    </Section>
+        </div>
+    </section>
 );
 
 export default Projects;

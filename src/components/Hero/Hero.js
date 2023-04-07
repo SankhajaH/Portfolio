@@ -1,33 +1,43 @@
 import React from 'react';
+import Typewriter from 'typewriter-effect';
 
-import { Section } from '../../styles/GlobalComponents';
-import Button from '../../styles/GlobalComponents/Button';
-import { LeftSection, A, SectionText, SectionTitle } from './HeroStyles';
+const Hero = () => {
+    return (
+        <section id='hero' style={{minHeight: '90vh'}} className='flex items-center'>
+            <div>
+                <p className='text-xl font-semibold text-white-base'>
+                    Hey there! Welcome to My Porfolio. I am
+                </p>
+                <Typewriter
+                    options={{
+                        strings: [
+                            `<span class='text-6xl font-semibold text-blue py-4'> Sankhaja Hapukotuwa </span>`,
+                        ],
 
-
-const Hero = () => (
-  <Section>
-    <LeftSection>
-    <SectionText>
-        Hey there! <br />
-        Welcome to My Porfolio. <br/>
-        I am  
-      </SectionText>
-      <SectionTitle main center>
-        Sankhaja Hapukotuwa
-      </SectionTitle>
-      <SectionText>
-        I&lsquo;m a Fullstack Developer, currently based in Kandy, <br/>
-        Sri Lanka.
-        </SectionText>
-        <A 
-        href='/sankhaja_resume.pdf'
-        rel='noopener noreferrer'
-        target='_blank'>
-          Resume
-        </A>
-    </LeftSection>
-  </Section>
-);
+                        loop: false,
+                        autoStart: true,
+                        deleteSpeed: Infinity,
+                        cursor: '_',
+                        typeSpeed: 100,
+                    }}
+                />
+                <p className='text-3xl font-semibold'>
+                    I&lsquo;m a Fullstack Developer, currently based in Kandy, <br />
+                    Sri Lanka.
+                </p>
+                <div className='flex flex-row py-4'>
+                    <a
+                        href='/sankhaja_resume.pdf'
+                        rel='noopener noreferrer'
+                        target='_blank'
+                        className='bg-blue rounded-md w-fit hover:cursor-pointer hover:bg-opacity-40'
+                    >
+                        <p className='px-6 py-4 text-white-base'>Resume</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    );
+};
 
 export default Hero;

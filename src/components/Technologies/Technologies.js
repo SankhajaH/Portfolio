@@ -1,52 +1,48 @@
 import React from 'react';
 import {DiFirebase, DiReact} from 'react-icons/di';
 import {FiFigma} from 'react-icons/fi';
-import {Section, SectionDivider, SectionText, SectionTitle} from '../../styles/GlobalComponents';
-import {List, ListContainer, ListItem, ListParagraph, ListTitle} from './TechnologiesStyles';
 
 const Technologies = () => (
-    <Section id='tech'>
-        <SectionDivider />
-        <br />
-        <SectionTitle>Technologies</SectionTitle>
-        <SectionText>
+    <section id='technologies'>
+        <div>Technologies</div>
+        <div>
             I've worked with an array of technologies in the web development realm. From design to
             build!
-        </SectionText>
-        <List>
-            <ListItem>
+        </div>
+        <div>
+            <div>
                 <FiFigma size='2rem' />
-                <ListContainer>
-                    <ListTitle>UI/UX</ListTitle>
-                    <ListParagraph>
+                <div>
+                    <div>UI/UX</div>
+                    <div>
                         Experience with <br />
                         design tools like Figma.
-                    </ListParagraph>
-                </ListContainer>
-            </ListItem>
-            <ListItem>
+                    </div>
+                </div>
+            </div>
+            <div>
                 <DiReact size='3rem' />
-                <ListContainer>
-                    <ListTitle>Front-End</ListTitle>
-                    <ListParagraph>
+                <div>
+                    <div>Front-End</div>
+                    <div>
                         Experience with <br />
                         HTML, CSS, Javascript, React.js, Next.js, Commerce.Js, TailwindCSS,
                         MaterialUI and ChakraUI.
-                    </ListParagraph>
-                </ListContainer>
-            </ListItem>
-            <ListItem>
+                    </div>
+                </div>
+            </div>
+            <div>
                 <DiFirebase size='3rem' />
-                <ListContainer>
-                    <ListTitle>Back-End</ListTitle>
-                    <ListParagraph>
+                <div>
+                    <div>Back-End</div>
+                    <div>
                         Experience with <br />
                         Node.js, Nest.Js Firebase and SQL.
-                    </ListParagraph>
-                </ListContainer>
-            </ListItem>
-        </List>
-    </Section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 );
 
 export default Technologies;

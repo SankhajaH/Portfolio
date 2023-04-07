@@ -1,15 +1,19 @@
+import Head from 'next/head';
 import React from 'react';
-
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
-import {Container} from './LayoutStyles';
 
-export const Layout = ({children}) => {
+export const Layout = ({title, children}) => {
     return (
-        <Container>
+        <>
+            <Head>
+                <title>{title}</title>
+            </Head>
             <Header />
-            <main>{children}</main>
+            <main className='relative min-h-screen font-sans bg-primary-base text-white-dark'>
+                {children}
+            </main>
             <Footer />
-        </Container>
+        </>
     );
 };
