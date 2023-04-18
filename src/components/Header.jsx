@@ -58,35 +58,37 @@ const Header = () => {
                     </a>
                 </ScrollLink>
             </div>
-            <div id='navItems' className='hidden md:visibleflex flex-row space-x-16'>
-                <ScrollLink
-                    className='transition ease-in cursor-pointer hover:text-blue'
-                    to='projects'
-                    smooth
-                    duration={500}
-                    offset={-100}
-                    isDynamic
-                    onClick={handleLink}
-                >
-                    Projects
-                </ScrollLink>
+            <div className='hidden md:block'>
+                <div id='navItems' className='flex flex-row space-x-12'>
+                    <ScrollLink
+                        className='transition ease-in cursor-pointer hover:text-blue'
+                        to='projects'
+                        smooth
+                        duration={500}
+                        offset={-100}
+                        isDynamic
+                        onClick={handleLink}
+                    >
+                        Projects
+                    </ScrollLink>
 
-                <ScrollLink
-                    className='transition ease-in cursor-pointer hover:text-blue'
-                    to='technologies'
-                    smooth
-                    duration={500}
-                    offset={-100}
-                    isDynamic
-                    onClick={handleLink}
-                >
-                    Technologies
-                </ScrollLink>
+                    <ScrollLink
+                        className='transition ease-in cursor-pointer hover:text-blue'
+                        to='technologies'
+                        smooth
+                        duration={500}
+                        offset={-100}
+                        isDynamic
+                        onClick={handleLink}
+                    >
+                        Technologies
+                    </ScrollLink>
 
-                <div className='transition ease-in cursor-pointer hover:text-blue'>
-                    <a href='/sankhaja_resume.pdf' rel='noopener noreferrer' target='_blank'>
-                        <div>Resume</div>
-                    </a>
+                    <div className='transition ease-in cursor-pointer hover:text-blue'>
+                        <a href='/sankhaja_resume.pdf' rel='noopener noreferrer' target='_blank'>
+                            <div>Resume</div>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div id='navItems' className='flex flex-row space-x-3'>
