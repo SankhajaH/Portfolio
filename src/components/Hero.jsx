@@ -21,7 +21,7 @@ const Hero = () => {
                 <Typewriter
                     options={{
                         strings: [
-                            `<span class='text-6xl font-semibold text-blue py-4'> Sankhaja Hapukotuwa. </span>`,
+                            `<span class='text-4xl md:text-6xl font-semibold text-blue py-4'> Sankhaja Hapukotuwa. </span>`,
                         ],
 
                         loop: false,
@@ -31,7 +31,7 @@ const Hero = () => {
                         typeSpeed: 100,
                     }}
                 />
-                <p className='text-3xl font-semibold py-2'>
+                <p className='text-2xl md:text-3xl font-semibold py-2'>
                     I&lsquo;m a Fullstack Developer, currently based in Kandy, <br />
                     Sri Lanka.
                 </p>

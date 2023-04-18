@@ -36,7 +36,7 @@ const Header = () => {
     };
     return (
         <nav className='sticky top-0 z-50 flex items-center justify-between bg-primary-base text-white-dark p-4'>
-            <div id='id' className='flex flex-row'>
+            <div id='id' className='pt-2 flex flex-row'>
                 <ScrollLink
                     className='transition ease-in cursor-pointer'
                     to='home'
@@ -58,7 +58,7 @@ const Header = () => {
                     </a>
                 </ScrollLink>
             </div>
-            <div id='navItems' className='flex flex-row space-x-16'>
+            <div id='navItems' className='hidden md:visibleflex flex-row space-x-16'>
                 <ScrollLink
                     className='transition ease-in cursor-pointer hover:text-blue'
                     to='projects'

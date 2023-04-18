@@ -3,7 +3,7 @@ import {HiExternalLink} from 'react-icons/hi';
 
 const ProjectCard = ({id, image, title, description, tags, source, visit}) => {
     return (
-        <div className='rounded-lg shadow-lg bg-white dark:bg-gray-800 overflow-hidden flex'>
+        <div className='rounded-lg shadow-lg bg-white dark:bg-gray-800 overflow-hidden md:flex'>
             <div className='flex flex-col'>
                 <img className='h-full' src={image} />
                 <div className='flex flex-row justify-center pb-2 mt-4'>
@@ -25,7 +25,7 @@ const ProjectCard = ({id, image, title, description, tags, source, visit}) => {
                     </a>
                 </div>
             </div>
-            <div className=' w-2/3 p-4 bg-white dark:bg-gray-800 bg-opacity-75 flex flex-col justify-center'>
+            <div className='w-full md:w-2/3 p-4 bg-white dark:bg-gray-800 bg-opacity-75 flex flex-col justify-center'>
                 <h3 className='text-2xl font-semibold mb-2 text-blue'>{title}</h3>
                 <p className='text-gray-700 dark:text-gray-400'>{description}</p>
                 <div className=' mt-4'>
