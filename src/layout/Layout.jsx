@@ -10,7 +10,7 @@ export const Layout = ({title, children}) => {
                 <title>{title}</title>
             </Head>
             <Header />
-            <main className='relative min-h-screen font-sans bg-primary-base text-white-dark'>
+            <main className='min-h-screen font-sans bg-primary-base text-white-dark'>
                 {children}
             </main>
             <Footer />
