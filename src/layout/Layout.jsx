@@ -5,7 +5,7 @@ import Header from '../components/Header';
 
 export const Layout = ({title, children}) => {
     return (
-        <>
+        <div className='select-none'>
             <Head>
                 <title>{title}</title>
             </Head>
@@ -14,6 +14,6 @@ export const Layout = ({title, children}) => {
                 {children}
             </main>
             <Footer />
-        </>
+        </div>
     );
 };
