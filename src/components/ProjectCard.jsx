@@ -15,14 +15,16 @@ const ProjectCard = ({id, image, title, description, tags, source, visit}) => {
                     >
                         <AiFillGithub size={25} />
                     </a>
-                    <a
-                        href={visit}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='text-blue-500 hover:text-blue-700'
-                    >
-                        <HiExternalLink size={25} />
-                    </a>
+                    {visit && visit != '' && (
+                        <a
+                            href={visit}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='text-blue-500 hover:text-blue-700'
+                        >
+                            <HiExternalLink size={25} />
+                        </a>
+                    )}
                 </div>
             </div>
             <div className='w-full md:w-2/3 p-4 bg-white dark:bg-gray-800 bg-opacity-75 flex flex-col justify-center'>
