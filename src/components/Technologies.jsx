@@ -23,11 +23,11 @@ const Technologies = () => {
     return (
         <section id='technologies' style={{minHeight: '80vh'}} className='py-36 border-b-2'>
             <p className='font-semibold text-5xl pb-4'>Technologies</p>
-            <div className='text-3xl text-gray-400 pb-8'>
+            <div className='text-2xl md:text-3xl text-gray-400 pb-8'>
                 I've worked with an array of technologies in the web development realm. From design
                 to build!
             </div>
-            <div className='flex flex-row justify-between mt-4'>
+            <div className='md:flex md:flex-row justify-between mt-4'>
                 <div className='flex flex-col justify-start'>
                     <FiFigma size={30} />
                     <div className='py-2'>

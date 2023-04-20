@@ -2,15 +2,12 @@ import {gsap} from 'gsap';
 import React, {useEffect, useState} from 'react';
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
 import {DiCssdeck} from 'react-icons/di';
-import {GiHamburgerMenu} from 'react-icons/gi';
 import {HiOutlineMail} from 'react-icons/hi';
-import {MdClose} from 'react-icons/md';
 import {Link as ScrollLink} from 'react-scroll';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [menu, setMenu] = useState('');
-    const [burgerOpen, setBurgerOpen] = useState(false);
 
     useEffect(() => {
         const tl = gsap.timeline({delay: 0.4});
@@ -39,7 +36,7 @@ const Header = () => {
     };
     return (
         <nav className='sticky top-0 z-50 flex items-center justify-between bg-primary-base text-white-dark p-4'>
-            <div id='id' className='flex flex-row'>
+            <div id='id' className='pt-2 flex flex-row'>
                 <ScrollLink
                     className='transition ease-in cursor-pointer'
                     to='home'
@@ -61,38 +58,40 @@ const Header = () => {
                     </a>
                 </ScrollLink>
             </div>
-            <div id='navItems' className='collapse  md:visible flex flex-row space-x-16'>
-                <ScrollLink
-                    className='transition ease-in cursor-pointer hover:text-blue'
-                    to='projects'
-                    smooth
-                    duration={500}
-                    offset={-100}
-                    isDynamic
-                    onClick={handleLink}
-                >
-                    Projects
-                </ScrollLink>
+            <div className='hidden md:block'>
+                <div id='navItems' className='flex flex-row space-x-12'>
+                    <ScrollLink
+                        className='transition ease-in cursor-pointer hover:text-blue'
+                        to='projects'
+                        smooth
+                        duration={500}
+                        offset={-100}
+                        isDynamic
+                        onClick={handleLink}
+                    >
+                        Projects
+                    </ScrollLink>
 
-                <ScrollLink
-                    className='transition ease-in cursor-pointer hover:text-blue'
-                    to='technologies'
-                    smooth
-                    duration={500}
-                    offset={-100}
-                    isDynamic
-                    onClick={handleLink}
-                >
-                    Technologies
-                </ScrollLink>
+                    <ScrollLink
+                        className='transition ease-in cursor-pointer hover:text-blue'
+                        to='technologies'
+                        smooth
+                        duration={500}
+                        offset={-100}
+                        isDynamic
+                        onClick={handleLink}
+                    >
+                        Technologies
+                    </ScrollLink>
 
-                <div className='transition ease-in cursor-pointer hover:text-blue'>
-                    <a href='/sankhaja_resume.pdf' rel='noopener noreferrer' target='_blank'>
-                        <div>Resume</div>
-                    </a>
+                    <div className='transition ease-in cursor-pointer hover:text-blue'>
+                        <a href='/sankhaja_resume.pdf' rel='noopener noreferrer' target='_blank'>
+                            <div>Resume</div>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div id='navItems' className='collapse md:visible flex flex-row space-x-3'>
+            <div id='navItems' className='flex flex-row space-x-3'>
                 <div>
                     <a href='mailto:shapu953@gmail.com' rel='noopener noreferrer' target='_blank'>
                         <HiOutlineMail
@@ -126,15 +125,6 @@ const Header = () => {
                     </a>
                 </div>
             </div>
-            {!burgerOpen ? (
-                <div id='navItems' className='md:invisible'>
-                    <GiHamburgerMenu onClick={() => setBurgerOpen(true)} />
-                </div>
-            ) : (
-                <div id='navItems' className='md:invisible'>
-                    <MdClose onClick={() => setBurgerOpen(false)} />
-                </div>
-            )}
         </nav>
     );
 };

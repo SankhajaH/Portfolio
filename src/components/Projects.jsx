@@ -27,7 +27,7 @@ const Projects = () => {
                 {projects.map(({id, image, title, description, tags, source, visit}) => (
                     <div
                         key={id}
-                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'
+                        className='transition-all ease-in-out delay-150 duration-500  hover:scale-105'
                     >
                         <ProjectCard
                             id={id}
