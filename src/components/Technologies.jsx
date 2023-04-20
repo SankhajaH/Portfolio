@@ -55,7 +55,8 @@ const Technologies = () => {
                         <div className='text-blue font-semibold text-2xl'>Back-End</div>
                         <div>
                             Experience with <br />
-                            Node.js, Nest.Js Firebase and SQL.
+                            Node.js, Nest.Js, Firebase, Mongodb, <br />
+                            AWS and SQL.
                         </div>
                     </div>
                 </div>
